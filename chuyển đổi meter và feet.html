@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="num">
+<select id="v">
+    <option value="1">
+        Meters to feet
+    </option>
+    <option value="2">
+        Feet to meters
+    </option>
+</select>
+<button onclick="covert()">Convert</button>
+<br>
+<p id="result"></p>
+
+<script>
+    function Feettometer(feet) {
+        let meter;
+        return meter = 0.305 * feet;
+    }
+    function metertofeet(meter) {
+        let feet;
+        return feet = 3.279 * meter;
+    }
+    function covert() {
+        let ste = document.getElementById("num").value;
+        let step = document.getElementById("v").value;
+        if (step == 1) {
+            let a = Feettometer(ste);
+            document.getElementById("result").innerHTML = a;
+        } else {
+            let b = metertofeet(ste);
+            document.getElementById("result").innerHTML = b;
+        }
+    }
+
+</script>
+</body>
+</html>
